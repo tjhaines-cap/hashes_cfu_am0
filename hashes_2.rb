@@ -10,8 +10,10 @@ states = {
 # Use the each method to iterate through it and print out a sentence stating each state name and abbreviation
 #
 #
-#
-
+#Go through each key value pair in states
+states.each do |state, abrev|
+  puts "State name: #{state}, State abbreviation: #{abrev}"
+end
 
 # ======================================
 # 2- Using the following Hash
@@ -26,8 +28,10 @@ birthdays = {
 # Use the each method to iterate through it and print out a sentence stating each friends name and birthday
 #
 #
-#
-
+# Go through each key value pair in birhtdays
+birthdays.each do |name, birthday|
+  puts "#{name}'s birthday is #{birthday}"
+end
 
 # ======================================
 # 3- Using the following Hash
@@ -42,4 +46,10 @@ login_statuses = {
 # Use the each method to iterate through it and print ONLY the names of friends who are "logged in"
 #
 #
-#
+# Fo through each key value pair in login_statuses
+login_statuses.each do |name, status|
+  #Check the login status of the current friend
+  if status
+    puts "#{name} is logged in."
+  end
+end
